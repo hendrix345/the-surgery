@@ -7,7 +7,7 @@ html {
   }
 
 body {
-    
+
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -49,13 +49,56 @@ h2 {
 }
 
 .nav-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: white;
     text-decoration: none;
     padding: 2vw;
     margin: 10px 2vw;
+    font-size: 0.8em;
 }
 
 .nav-link:hover {
     text-decoration: underline;
+}
+
+.nav-link:before {
+  content:"";
+  width: 40px;
+  height: 40px;
+  background: no-repeat;
+  background-size: contain;
+  margin-bottom: 10px;
+}
+
+.about:before {
+  background-image: url("about.png");
+}
+
+.dental:before {
+  background-image: url("dental.png");
+}
+
+.facial:before {
+  background-image: url("facial.png");
+}
+
+.price:before {
+  background-image: url("price.png");
+}
+
+.contact:before {
+  background-image: url("contact.png");
+}
+
+@media (min-width:620px) {
+  .nav-link {
+    font-size: 1em;
+  }
+
+  .nav-link:before {
+      display: none;
+    }
 }
